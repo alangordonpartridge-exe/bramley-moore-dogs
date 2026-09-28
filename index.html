@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bramley Moore Dogs | Free-range hot dogs in Liverpool</title>
+<meta name="description" content="Proper hot dogs from Liverpool. Free-range, high-welfare sausages made by our butcher, in fresh local buns.">
+<meta property="og:title" content="Bramley Moore Dogs">
+<meta property="og:description" content="Free-range hot dogs, straight from the docks.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Rethink+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mustard:#FFC93C; --ketchup:#E8442E; --mersey:#1B2A4A; --bun:#F2A65A;
+  --pickle:#6FAE4E; --sky:#9FD3E6; --white:#FFFDF8; --sausage:#B9472A;
+  --display:"Bagel Fat One","Cooper Black","Arial Rounded MT Bold",sans-serif;
+  --body:"Rethink Sans","Trebuchet MS","Segoe UI",Arial,sans-serif;
+  --ink:3px solid var(--mersey);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:18px;line-height:1.55;color:var(--mersey);background:var(--mustard)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px dashed var(--ketchup);outline-offset:4px}
+.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:.98;margin:0}
+h2{font-size:clamp(2.6rem,6vw,4.6rem)}
+p{margin:0 0 1em;max-width:58ch}
+
+/* Buttons: chunky cartoon with hard offset shadow */
+.btn{display:inline-block;font-family:var(--display);font-size:1.25rem;text-decoration:none;color:var(--white);background:var(--ketchup);border:var(--ink);border-radius:14px;padding:.7rem 1.4rem .8rem;box-shadow:5px 5px 0 var(--mersey);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--mersey)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--mersey)}
+.btn.alt{background:var(--white);color:var(--mersey)}
+
+/* Header */
+header{padding:1.2rem 0}
+.head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.logo{font-family:var(--display);font-size:1.7rem;text-decoration:none;line-height:.9;display:flex;align-items:center;gap:.6rem}
+.logo span{display:block;font-size:1rem;color:var(--ketchup)}
+.logo svg{width:58px;height:44px}
+nav ul{list-style:none;display:flex;gap:1.6rem;margin:0;padding:0;font-weight:700}
+nav a{text-decoration:none;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--ketchup)}
+@media (max-width:700px){nav ul{gap:1rem;font-size:.95rem}}
+
+/* Hero */
+.hero{padding:2rem 0 5rem;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(3.4rem,8.5vw,7rem);color:var(--mersey);margin-bottom:1.2rem}
+.hero h1 .line2{display:block;color:var(--ketchup);-webkit-text-stroke:3px var(--mersey);paint-order:stroke fill;transform:rotate(-2deg);transform-origin:left}
+.hero p{font-size:1.25rem;font-weight:600}
+.hero .ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem}
+.mascot-wrap{position:relative}
+.mascot{width:100%;animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.sticker{position:absolute;font-family:var(--display);background:var(--white);border:var(--ink);border-radius:50%;width:120px;height:120px;display:grid;place-items:center;text-align:center;line-height:1;font-size:1.05rem;box-shadow:4px 4px 0 var(--mersey);padding:.6rem}
+.sticker.s1{top:0;right:4%;transform:rotate(12deg);background:var(--pickle);color:var(--white)}
+.sticker.s2{bottom:6%;left:0;transform:rotate(-10deg)}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.sticker{width:96px;height:96px;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.mascot{animation:none}html{scroll-behavior:auto}}
+
+/* Wave dividers */
+.wave{display:block;width:100%;height:60px}
+
+/* Ticker */
+.ticker{background:var(--mersey);color:var(--mustard);font-family:var(--display);font-size:1.5rem;overflow:hidden;white-space:nowrap;padding:.7rem 0;border-block:var(--ink)}
+.ticker div{display:inline-block;animation:scroll 28s linear infinite}
+.ticker span{margin:0 1.2rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
+
+/* Menu */
+.menu{background:var(--white);padding:5rem 0}
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:3rem}
+.menu-head p{margin:0;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.8rem}
+.card{background:var(--white);border:var(--ink);border-radius:22px;padding:1.4rem;box-shadow:6px 6px 0 var(--mersey);display:flex;flex-direction:column}
+.card:nth-child(odd){transform:rotate(-1deg)}
+.card:nth-child(even){transform:rotate(1deg)}
+.card .pic{border:var(--ink);border-radius:16px;margin-bottom:1rem;padding:.6rem}
+.card h3{font-size:1.8rem;margin-bottom:.4rem}
+.card p{font-size:1rem;flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.price{font-family:var(--display);font-size:1.7rem;color:var(--ketchup)}
+.tag{font-size:.8rem;font-weight:700;border:2px solid var(--mersey);border-radius:999px;padding:.15rem .6rem;background:var(--mustard)}
+.tag.veg{background:var(--pickle);color:var(--white)}
+.extras{margin-top:3rem;border:var(--ink);border-radius:22px;padding:1.4rem 1.6rem;background:var(--sky);display:flex;gap:1rem 2.5rem;flex-wrap:wrap;align-items:center}
+.extras h3{font-size:1.6rem}
+.extras ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;font-weight:600}
+
+/* Sourcing */
+.source{padding:5rem 0;background:var(--pickle);color:var(--white)}
+.source h2{color:var(--white);-webkit-text-stroke:3px var(--mersey);paint-order:stroke fill;margin-bottom:1rem}
+.source .intro{font-size:1.2rem;font-weight:600}
+.promises{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+.promise{background:var(--white);color:var(--mersey);border:var(--ink);border-radius:22px;padding:1.6rem;box-shadow:6px 6px 0 var(--mersey)}
+.promise svg{width:84px;height:84px;margin-bottom:.8rem}
+.promise h3{font-size:1.6rem;margin-bottom:.4rem}
+.promise p{font-size:1rem;margin:0}
+@media (max-width:820px){.promises{grid-template-columns:1fr}}
+
+/* Find us */
+.find{padding:5rem 0;background:var(--sky)}
+.find-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:start}
+.spots{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1rem}
+.spot{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center;background:var(--white);border:var(--ink);border-radius:18px;padding:1rem 1.2rem;box-shadow:4px 4px 0 var(--mersey)}
+.spot .day{font-family:var(--display);font-size:1.3rem;background:var(--mustard);border:var(--ink);border-radius:12px;padding:.3rem .7rem;min-width:88px;text-align:center}
+.spot b{display:block}
+.spot span{font-size:.95rem}
+.dock{background:var(--white);border:var(--ink);border-radius:22px;overflow:hidden;box-shadow:6px 6px 0 var(--mersey)}
+.dock-body{padding:1.4rem 1.6rem}
+.dock h3{font-size:1.8rem;margin-bottom:.5rem}
+@media (max-width:820px){.find-grid{grid-template-columns:1fr}}
+
+/* Catering */
+.cater{padding:5rem 0;background:var(--ketchup);color:var(--white);text-align:center}
+.cater h2{-webkit-text-stroke:3px var(--mersey);paint-order:stroke fill;margin-bottom:1rem}
+.cater p{margin-inline:auto;font-size:1.2rem;font-weight:600}
+.cater .btn{background:var(--mustard);color:var(--mersey);margin-top:1rem}
+
+/* Footer */
+footer{background:var(--mersey);color:var(--mustard);padding:3.5rem 0 2rem}
+.foot-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer .big{font-family:var(--display);font-size:clamp(2rem,5vw,3.4rem);line-height:.95}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem;font-weight:600}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.small{font-size:.85rem;opacity:.8;margin-top:2.5rem}
+</style>
+</head>
+<body>
+
+<!-- Reusable hot dog drawing -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="dog" viewBox="0 0 400 220">
+      <ellipse cx="200" cy="205" rx="160" ry="10" fill="#1B2A4A" opacity=".15"/>
+      <rect x="45" y="70" width="310" height="100" rx="50" fill="#F2A65A" stroke="#1B2A4A" stroke-width="6"/>
+      <rect x="18" y="52" width="364" height="72" rx="36" fill="currentColor" stroke="#1B2A4A" stroke-width="6"/>
+      <path d="M60 70 q12 -10 24 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+      <rect x="40" y="108" width="320" height="86" rx="43" fill="#F2A65A" stroke="#1B2A4A" stroke-width="6"/>
+      <path d="M70 124 q20 12 40 0" fill="none" stroke="#FFD89A" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap head">
+    <a href="#top" class="logo" aria-label="Bramley Moore Dogs home">
+      <svg viewBox="0 0 400 220" style="color:#B9472A"><use href="#dog"/></svg>
+      <div>Bramley Moore<span>Dogs</span></div>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#sausages">Our sausages</a></li>
+        <li><a href="#find-us">Find us</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Proper dogs.<span class="line2">Straight from the docks.</span></h1>
+        <p>Free-range sausages made by our butcher, stuffed in soft local buns and piled high. Liverpool's finest hot dogs, no nonsense.</p>
+        <div class="ctas">
+          <a href="#menu" class="btn">See the menu</a>
+          <a href="#find-us" class="btn alt">Where we are this week</a>
+        </div>
+      </div>
+      <div class="mascot-wrap">
+        <!-- Mascot: Bramley the hot dog -->
+        <svg class="mascot" viewBox="0 0 460 400" role="img" aria-label="Bramley, a cheerful cartoon hot dog wearing a flat cap and waving">
+          <!-- waves & cranes background -->
+          <g stroke="#1B2A4A" stroke-width="5" stroke-linecap="round" fill="none" opacity=".35">
+            <path d="M40 60 V10 H110 M70 10 V60 M110 10 L90 40"/>
+            <path d="M370 70 V20 H430 M395 20 V70 M430 20 L415 48"/>
+          </g>
+          <ellipse cx="230" cy="378" rx="170" ry="14" fill="#1B2A4A" opacity=".15"/>
+          <!-- left arm (waving) -->
+          <path d="M70 250 Q30 220 38 160" fill="none" stroke="#1B2A4A" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="38" cy="150" r="17" fill="#FFFDF8" stroke="#1B2A4A" stroke-width="6"/>
+          <!-- right arm -->
+          <path d="M392 262 Q432 272 436 310" fill="none" stroke="#1B2A4A" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="436" cy="318" r="17" fill="#FFFDF8" stroke="#1B2A4A" stroke-width="6"/>
+          <!-- legs -->
+          <path d="M180 350 V380 M280 350 V380" stroke="#1B2A4A" stroke-width="7" stroke-linecap="round"/>
+          <path d="M160 382 H192 M260 382 H292" stroke="#1B2A4A" stroke-width="10" stroke-linecap="round"/>
+          <!-- back bun -->
+          <rect x="72" y="175" width="316" height="130" rx="60" fill="#F2A65A" stroke="#1B2A4A" stroke-width="7"/>
+          <!-- sausage -->
+          <rect x="40" y="150" width="380" height="90" rx="45" fill="#B9472A" stroke="#1B2A4A" stroke-width="7"/>
+          <path d="M80 165 q14 -10 28 0" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".45"/>
+          <!-- mustard squiggle -->
+          <path d="M85 190 q20 -22 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFC93C" stroke-width="11" stroke-linecap="round"/>
+          <!-- flat cap -->
+          <path d="M160 156 Q170 96 238 98 Q300 100 304 150 Z" fill="#6B7A8F" stroke="#1B2A4A" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M288 146 Q330 140 340 156 Q300 164 270 156" fill="#56657A" stroke="#1B2A4A" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M190 120 L200 150 M222 104 L226 150 M256 106 L252 150" stroke="#1B2A4A" stroke-width="3" opacity=".35"/>
+          <circle cx="232" cy="99" r="7" fill="#56657A" stroke="#1B2A4A" stroke-width="5"/>
+          <!-- front bun with face -->
+          <rect x="62" y="220" width="336" height="136" rx="66" fill="#F2A65A" stroke="#1B2A4A" stroke-width="7"/>
+          <path d="M100 246 q24 14 48 0" fill="none" stroke="#FFD89A" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="185" cy="280" r="14" fill="#1B2A4A"/><circle cx="190" cy="275" r="5" fill="#fff"/>
+          <circle cx="275" cy="280" r="14" fill="#1B2A4A"/><circle cx="280" cy="275" r="5" fill="#fff"/>
+          <ellipse cx="160" cy="308" rx="16" ry="9" fill="#E8442E" opacity=".45"/>
+          <ellipse cx="300" cy="308" rx="16" ry="9" fill="#E8442E" opacity=".45"/>
+          <path d="M205 308 Q230 334 255 308" fill="#E8442E" stroke="#1B2A4A" stroke-width="6" stroke-linejoin="round"/>
+          <!-- motion marks -->
+          <path d="M14 120 l-10 -8 M22 104 l-4 -12 M58 118 l8 -10" stroke="#1B2A4A" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <div class="sticker s1">100% free range</div>
+        <div class="sticker s2">Made in L3</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div>
+      <span>Free-range pork</span><span>🌭</span><span>Butcher made</span><span>🌭</span><span>Local bakery buns</span><span>🌭</span><span>Proper onions</span><span>🌭</span><span>Veggie dogs too</span><span>🌭</span>
+      <span>Free-range pork</span><span>🌭</span><span>Butcher made</span><span>🌭</span><span>Local bakery buns</span><span>🌭</span><span>Proper onions</span><span>🌭</span><span>Veggie dogs too</span><span>🌭</span>
+    </div>
+  </div>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="menu-head">
+        <h2>The menu</h2>
+        <p>Every dog comes in a toasted brioche or sourdough bun.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="pic" style="background:var(--mustard)">
+            <svg viewBox="0 0 400 220" style="color:#B9472A" aria-hidden="true"><use href="#dog"/><path d="M70 82 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFC93C" stroke-width="10" stroke-linecap="round"/></svg>
+          </div>
+          <h3>The Dockside</h3>
+          <p>Our classic free-range pork sausage, sticky fried onions and English mustard.</p>
+          <div class="foot"><span class="price">£7</span><span class="tag">Bestseller</span></div>
+        </article>
+        <article class="card">
+          <div class="pic" style="background:var(--sky)">
+            <svg viewBox="0 0 400 220" style="color:#B9472A" aria-hidden="true"><use href="#dog"/><g fill="#8E2D5E" stroke="#1B2A4A" stroke-width="4"><circle cx="90" cy="68" r="12"/><circle cx="150" cy="60" r="12"/><circle cx="210" cy="68" r="12"/><circle cx="270" cy="60" r="12"/><circle cx="325" cy="68" r="12"/></g></svg>
+          </div>
+          <h3>The Scouser</h3>
+          <p>Pork and black pepper sausage, pickled red cabbage and a dollop of brown sauce.</p>
+          <div class="foot"><span class="price">£8</span><span class="tag">Local legend</span></div>
+        </article>
+        <article class="card">
+          <div class="pic" style="background:var(--ketchup)">
+            <svg viewBox="0 0 400 220" style="color:#8C3320" aria-hidden="true"><use href="#dog"/><path d="M70 82 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FF6B4A" stroke-width="12" stroke-linecap="round"/><g fill="#6FAE4E" stroke="#1B2A4A" stroke-width="3"><ellipse cx="120" cy="60" rx="10" ry="6"/><ellipse cx="240" cy="58" rx="10" ry="6"/><ellipse cx="310" cy="62" rx="10" ry="6"/></g></svg>
+          </div>
+          <h3>The Crane Driver</h3>
+          <p>Smoky free-range beef, slow-cooked chilli, jalapeños and a heap of cheese.</p>
+          <div class="foot"><span class="price">£9</span><span class="tag">Spicy</span></div>
+        </article>
+        <article class="card">
+          <div class="pic" style="background:var(--pickle)">
+            <svg viewBox="0 0 400 220" style="color:#D98B4A" aria-hidden="true"><use href="#dog"/><path d="M70 82 q20 -20 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFFDF8" stroke-width="10" stroke-linecap="round"/><g fill="#6FAE4E" stroke="#1B2A4A" stroke-width="3"><rect x="100" y="52" width="26" height="14" rx="6"/><rect x="200" y="50" width="26" height="14" rx="6"/><rect x="290" y="52" width="26" height="14" rx="6"/></g></svg>
+          </div>
+          <h3>The Waterfront</h3>
+          <p>Smoked carrot and bean dog, crunchy pickles, crispy onions and garlic mayo.</p>
+          <div class="foot"><span class="price">£7</span><span class="tag veg">Vegan</span></div>
+        </article>
+      </div>
+      <div class="extras">
+        <h3>Add some extras</h3>
+        <ul>
+          <li>Cheesy fries £4</li>
+          <li>Extra onions 50p</li>
+          <li>Bacon bits £1.50</li>
+          <li>Local craft cola £2.50</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="source" id="sausages">
+    <div class="wrap">
+      <h2>Good sausages start on the farm</h2>
+      <p class="intro">We only use free-range, high-welfare meat from farms in the North West. Our butcher makes every batch fresh, with no fillers and nothing you can't pronounce.</p>
+      <div class="promises">
+        <div class="promise">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <ellipse cx="50" cy="58" rx="36" ry="26" fill="#F7A8B8" stroke="#1B2A4A" stroke-width="4"/>
+            <circle cx="80" cy="46" r="16" fill="#F7A8B8" stroke="#1B2A4A" stroke-width="4"/>
+            <ellipse cx="90" cy="49" rx="6" ry="5" fill="#F58FA5" stroke="#1B2A4A" stroke-width="3"/>
+            <circle cx="78" cy="42" r="2.5" fill="#1B2A4A"/>
+            <path d="M28 82 v10 M44 84 v10 M60 84 v10 M72 80 v10" stroke="#1B2A4A" stroke-width="4" stroke-linecap="round"/>
+            <path d="M14 52 q-8 -6 -2 -12" fill="none" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h3>Happy pigs</h3>
+          <p>Free-range from North West farms, with room to roam and root around.</p>
+        </div>
+        <div class="promise">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <rect x="18" y="30" width="64" height="56" rx="8" fill="#FFFDF8" stroke="#1B2A4A" stroke-width="4"/>
+            <path d="M12 34 L50 10 L88 34 Z" fill="#E8442E" stroke="#1B2A4A" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="40" y="58" width="20" height="28" fill="#F2A65A" stroke="#1B2A4A" stroke-width="4"/>
+            <rect x="26" y="42" width="14" height="12" fill="#9FD3E6" stroke="#1B2A4A" stroke-width="3"/>
+            <rect x="60" y="42" width="14" height="12" fill="#9FD3E6" stroke="#1B2A4A" stroke-width="3"/>
+          </svg>
+          <h3>Butcher made</h3>
+          <p>Made fresh each week to our own recipes by a family butcher, just down the road.</p>
+        </div>
+        <div class="promise">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M14 60 Q14 30 50 30 Q86 30 86 60 Q86 76 70 76 H30 Q14 76 14 60 Z" fill="#F2A65A" stroke="#1B2A4A" stroke-width="4"/>
+            <path d="M34 44 l6 10 M50 40 l0 12 M66 44 l-6 10" stroke="#1B2A4A" stroke-width="4" stroke-linecap="round"/>
+            <path d="M40 18 q4 -6 0 -12 M58 18 q4 -6 0 -12" fill="none" stroke="#1B2A4A" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <h3>Local buns</h3>
+          <p>Baked every morning by an independent Liverpool bakery. Soft inside, toasted on the grill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" id="find-us">
+    <div class="wrap find-grid">
+      <div>
+        <h2>Find us this week</h2>
+        <p style="font-weight:600;margin-top:1rem">Follow <a href="https://instagram.com/bramleymooredogs">@bramleymooredogs</a> for live updates and sell-out warnings.</p>
+        <ul class="spots">
+          <li class="spot"><span class="day">Thu</span><div><b>Baltic Market</b><span>5pm – 10pm</span></div></li>
+          <li class="spot"><span class="day">Fri</span><div><b>Royal Albert Dock</b><span>12pm – 9pm</span></div></li>
+          <li class="spot"><span class="day">Sat</span><div><b>Bramley-Moore Dock</b><span>Matchdays: 2 hours before kick-off</span></div></li>
+          <li class="spot"><span class="day">Sun</span><div><b>Sefton Park</b><span>11am – 5pm, weather permitting</span></div></li>
+        </ul>
+      </div>
+      <div class="dock">
+        <svg viewBox="0 0 400 220" role="img" aria-label="Cartoon of the Bramley Moore Dogs van by the dock with cranes">
+          <rect width="400" height="220" fill="#9FD3E6"/>
+          <circle cx="330" cy="50" r="24" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4"/>
+          <g stroke="#1B2A4A" stroke-width="5" stroke-linecap="round" fill="none"><path d="M40 140 V40 H130 M80 40 V140 M130 40 L110 76"/></g>
+          <rect x="0" y="140" width="400" height="80" fill="#4A7FB5"/>
+          <path d="M0 150 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFFDF8" stroke-width="4"/>
+          <rect x="170" y="80" width="190" height="90" rx="16" fill="#E8442E" stroke="#1B2A4A" stroke-width="5"/>
+          <rect x="190" y="96" width="110" height="40" rx="6" fill="#FFC93C" stroke="#1B2A4A" stroke-width="4"/>
+          <text x="245" y="122" font-family="Bagel Fat One, sans-serif" font-size="16" text-anchor="middle" fill="#1B2A4A">HOT DOGS</text>
+          <rect x="312" y="96" width="34" height="40" rx="6" fill="#FFFDF8" stroke="#1B2A4A" stroke-width="4"/>
+          <circle cx="210" cy="172" r="16" fill="#1B2A4A"/><circle cx="210" cy="172" r="6" fill="#FFFDF8"/>
+          <circle cx="320" cy="172" r="16" fill="#1B2A4A"/><circle cx="320" cy="172" r="6" fill="#FFFDF8"/>
+        </svg>
+        <div class="dock-body">
+          <h3>Sell-outs happen</h3>
+          <p style="margin:0">We make a set number of dogs each day. Once they're gone, they're gone, so come early on busy days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cater" id="events">
+    <div class="wrap">
+      <h2>Book the van</h2>
+      <p>Weddings, birthdays, office parties and festivals across Merseyside. We bring the van, the dogs and the good vibes.</p>
+      <a class="btn" href="mailto:hello@bramleymooredogs.co.uk?subject=Event%20booking">Email us about your event</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="big">Bramley Moore<br>Dogs</div>
+      <ul>
+        <li><a href="mailto:hello@bramleymooredogs.co.uk">hello@bramleymooredogs.co.uk</a></li>
+        <li><a href="https://instagram.com/bramleymooredogs">Instagram</a></li>
+        <li><a href="https://tiktok.com/@bramleymooredogs">TikTok</a></li>
+      </ul>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#sausages">Our sausages</a></li>
+        <li><a href="#find-us">Find us</a></li>
+        <li><a href="#events">Events</a></li>
+      </ul>
+    </div>
+    <p class="small">© <span id="yr">2026</span> Bramley Moore Dogs, Liverpool. Allergen information available at the van, just ask.</p>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
